@@ -399,7 +399,8 @@ class SuperMarioBrosEnv(NESEnv):
     def _get_done(self):
         """Return True if the episode is over, False otherwise."""
         if self.is_single_stage_env:
-            return self._is_dying or self._is_dead or self._flag_get
+            return self._is_dying or self._is_dead
+        # or self._flag_get
         return self._is_game_over
 
     def _get_info(self):
